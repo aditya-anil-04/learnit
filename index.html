@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LearnIt — Video study guides</title>
+<meta name="description" content="A pinboard of Instagram and YouTube video guides, collected to help underprivileged children study.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%231B3B36'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23F2B705' font-family='Georgia, serif'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@500;700&family=IBM+Plex+Mono:wght@500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a class="logo" href="index.html">LearnIt<span class="logo-dot">.</span></a>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Guides</a>
+      <a href="submit.html">Submit a guide</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">a pinboard of video lessons</p>
+      <h1>Study help,<br>one video at a time.</h1>
+      <p class="hero-sub">Instagram and YouTube guides, collected for kids who don't have a tutor down the hall — pinned here for anyone to learn from, anywhere.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="board container" id="board">
+    <div class="board-toolbar">
+      <div class="filters" role="tablist" aria-label="Filter guides by platform">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All guides</button>
+        <button class="filter-btn" data-filter="youtube" role="tab" aria-selected="false">YouTube</button>
+        <button class="filter-btn" data-filter="instagram" role="tab" aria-selected="false">Instagram</button>
+      </div>
+      <p class="board-count"><span id="guide-count">0</span> guides pinned</p>
+    </div>
+
+    <div id="card-grid" class="card-grid"></div>
+    <p id="empty-state" class="empty-state" hidden>No guides match that filter yet.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-tagline">LearnIt is stocked by hand, one video at a time.</p>
+    <a class="btn btn-outline" href="submit.html">Know a great guide? Submit it →</a>
+  </div>
+</footer>
+
+<script src="js/videos-data.js"></script>
+<script src="js/render.js"></script>
+<script async src="https://www.instagram.com/embed.js"></script>
+</body>
+</html>
