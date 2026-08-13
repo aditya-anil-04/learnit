@@ -21,7 +21,7 @@
    Order here is the order they appear on the page.
    ============================================================ */
 
-const GUIDES = [
+window.GUIDES = [
   {
     platform: "youtube",
     url: "https://youtu.be/TIafCHAVygs?si=jOatbBAKsGEM142v",
