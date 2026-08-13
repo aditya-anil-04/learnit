@@ -32,6 +32,17 @@
     return null;
   }
 
+  // Turns "Class 4" into "class-4" so it can be compared against a
+  // filter button's data-filter value, regardless of exact spacing
+  // or capitalization typed into videos-data.js.
+  function slugify(text) {
+    return (text || "")
+      .toString()
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-");
+  }
+
   function buildMedia(guide) {
     const media = document.createElement("div");
     media.className = "card-media";
@@ -53,6 +64,13 @@
       blockquote.setAttribute("data-instgrm-permalink", guide.url);
       blockquote.setAttribute("data-instgrm-version", "14");
       media.appendChild(blockquote);
+    } else if (guide.platform === "x") {
+      const blockquote = document.createElement("blockquote");
+      blockquote.className = "twitter-tweet";
+      const link = document.createElement("a");
+      link.href = guide.url;
+      blockquote.appendChild(link);
+      media.appendChild(blockquote);
     }
 
     return media;
@@ -62,6 +80,7 @@
     const card = document.createElement("article");
     card.className = "guide-card";
     card.dataset.platform = guide.platform;
+    card.dataset.subject = slugify(guide.subject);
     const rotation = ROTATIONS[index % ROTATIONS.length];
     card.style.transform = `rotate(${rotation}deg)`;
 
@@ -72,9 +91,10 @@
 
     card.appendChild(buildMedia(guide));
 
+    const platformLabels = { youtube: "YouTube", instagram: "Instagram", x: "X" };
     const tag = document.createElement("p");
     tag.className = "card-tag";
-    tag.innerHTML = `<span class="dot"></span> ${guide.platform === "youtube" ? "YouTube" : "Instagram"}`;
+    tag.innerHTML = `<span class="dot"></span> ${platformLabels[guide.platform] || guide.platform}`;
     card.appendChild(tag);
 
     const title = document.createElement("h3");
@@ -98,7 +118,10 @@
   }
 
   function render() {
-    const guides = window.GUIDES || [];
+    // .slice() copies the array before .reverse() so we never mutate
+    // window.GUIDES itself — newest entry (bottom of videos-data.js)
+    // shows up first on the page.
+    const guides = (window.GUIDES || []).slice().reverse();
     grid.innerHTML = "";
 
     guides.forEach((guide, index) => {
@@ -120,6 +143,17 @@
       });
     }
 
+    // Same idea for X/Twitter's embed script.
+    if (window.twttr && window.twttr.widgets) {
+      window.twttr.widgets.load(grid);
+    } else {
+      window.addEventListener("load", () => {
+        if (window.twttr && window.twttr.widgets) {
+          window.twttr.widgets.load(grid);
+        }
+      });
+    }
+
     applyFilter(currentFilter());
   }
 
@@ -133,7 +167,7 @@
     let visibleCount = 0;
 
     cards.forEach((card) => {
-      const matches = filter === "all" || card.dataset.platform === filter;
+      const matches = filter === "all" || card.dataset.subject === filter;
       card.style.display = matches ? "" : "none";
       if (matches) visibleCount += 1;
     });
