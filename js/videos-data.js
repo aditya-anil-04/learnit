@@ -24,10 +24,10 @@
 const GUIDES = [
   {
     platform: "youtube",
-    url: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
-    title: "Example — replace me",
-    description: "This is a placeholder card so you can see how a YouTube guide looks. Swap the url, title and description for a real study video, or delete this block.",
-    subject: "Example"
+    url: "https://youtu.be/TIafCHAVygs?si=jOatbBAKsGEM142v",
+    title: "HCF and LCM",
+    description: "Concepts of HCF and LCM explained easily and from the basics in Hindi for Maharashtra board curriculum",
+    subject: "Math"
   },
   {
     platform: "instagram",
