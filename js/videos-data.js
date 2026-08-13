@@ -38,6 +38,36 @@ window.GUIDES = [
     title: "English Verbs",
     subject: "Class 8"
   },
+  {
+    platform: "youtube",
+    url: "https://www.youtube.com/watch?v=UB0wmTr88yU&list=PLgnbiIJ2vlFHkUBKaslXWhAmHaiXBuSkd",
+    title: "Geometrical Constructions (Hindi)",
+    subject: "Class 7"
+  },
+  {
+    platform: "youtube",
+    url: "https://www.youtube.com/watch?v=mJ_RCCNuxjs",
+    title: "Introduction to Geometry",
+    subject: "Class 6"
+  },
+  {
+    platform: "youtube",
+    url: "https://www.youtube.com/watch?v=-AnQj-ITtIw&list=PLW6ZJtqCeoWvpx_5yvDm9D44FgKWCZHM7",
+    title: "Parts of Speech (English & Hindi)",
+    subject: "Class 5"
+  },
+  {
+    platform: "instagram",
+    url: "https://www.instagram.com/reel/DUnz2rtjA5B/?igsh=eG5qZnkwMWt3NG92",
+    title: "3-Digit Multiplication Trick",
+    subject: "Class 4"
+  },
+  {
+    platform: "instagram",
+    url: "https://www.instagram.com/p/DZvzh3GT4WL/?igsh=MW9zY3lvZGxod3I0cA==",
+    title: "Tenses",
+    subject: "Class 10"
+  },
   /*{
     platform: "instagram",
     url: "https://www.instagram.com/reel/REPLACE_WITH_REAL_POST_URL/",
