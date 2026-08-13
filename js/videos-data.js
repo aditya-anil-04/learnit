@@ -27,13 +27,20 @@
    ============================================================ */
 
 window.GUIDES = [
-  {
+{
     platform: "youtube",
     url: "https://youtu.be/TIafCHAVygs?si=jOatbBAKsGEM142v",
     title: "HCF and LCM",
     description: "Concepts of HCF and LCM explained easily and from the basics in Hindi for Maharashtra board curriculum",
     subject: "Class 7"
-  },
+},
+{
+    platform: "youtube",
+    url: "https://www.youtube.com/watch?v=coTGEPXnW-M",
+    title: "English Verbs",
+    description: "English Verbs",
+    subject: "Class 8"
+},
   /*{
     platform: "instagram",
     url: "https://www.instagram.com/reel/REPLACE_WITH_REAL_POST_URL/",
