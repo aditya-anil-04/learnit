@@ -12,14 +12,16 @@
 
 .credit-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 22px 18px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .credit-tag {
   position: relative;
   display: inline-flex;
   align-items: center;
+  min-width: 220px;
   background: var(--card);
   border-radius: 3px;
   padding: 11px 20px;
