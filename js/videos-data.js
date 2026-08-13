@@ -9,16 +9,21 @@
    to Vercel), and the homepage updates automatically.
 
    Fields:
-     platform    "youtube" or "instagram"
-     url         the full post/video URL (any normal YouTube or
-                 Instagram link format works — just paste it)
+     platform    "youtube", "instagram", or "x" (for X/Twitter posts)
+     url         the full post/video URL — any normal YouTube,
+                 Instagram, or X/Twitter link format works, just
+                 paste it
      title       short title shown on the card
      description one or two sentences on what it teaches
-     subject     short label, e.g. "Math" or "Reading" (optional —
-                 delete the line if you don't want one)
+     subject     which class this guide is for — use "Class 4"
+                 through "Class 10" so it shows up under the
+                 matching filter button on the homepage
 
    To remove a guide, delete its whole { ... } block.
-   Order here is the order they appear on the page.
+
+   Add new guides to the BOTTOM of this list — the homepage always
+   shows the most recently added guide first, so the newest entry
+   here appears first on the page.
    ============================================================ */
 
 window.GUIDES = [
@@ -27,13 +32,20 @@ window.GUIDES = [
     url: "https://youtu.be/TIafCHAVygs?si=jOatbBAKsGEM142v",
     title: "HCF and LCM",
     description: "Concepts of HCF and LCM explained easily and from the basics in Hindi for Maharashtra board curriculum",
-    subject: "Math"
+    subject: "Class 7"
   },
   /*{
     platform: "instagram",
     url: "https://www.instagram.com/reel/REPLACE_WITH_REAL_POST_URL/",
     title: "Example — replace me",
     description: "This is a placeholder for an Instagram reel or post. Paste a real Instagram video URL here — it will embed automatically. Delete this block once you have real guides.",
-    subject: "Example"
+    subject: "Class 4"
+  },
+  {
+    platform: "x",
+    url: "https://x.com/REPLACE_WITH_ACCOUNT/status/REPLACE_WITH_REAL_POST_ID",
+    title: "Example — replace me",
+    description: "This is a placeholder for an X (Twitter) post. Paste a real x.com or twitter.com status URL here — it will embed automatically. Delete this block once you have real guides.",
+    subject: "Class 9"
   }*/
 ];
