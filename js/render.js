@@ -101,12 +101,6 @@
     title.textContent = guide.title || "Untitled guide";
     card.appendChild(title);
 
-    if (guide.description) {
-      const desc = document.createElement("p");
-      desc.textContent = guide.description;
-      card.appendChild(desc);
-    }
-
     if (guide.subject) {
       const subject = document.createElement("span");
       subject.className = "card-subject";
