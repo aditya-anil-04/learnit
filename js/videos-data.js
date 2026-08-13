@@ -29,11 +29,11 @@ window.GUIDES = [
     description: "Concepts of HCF and LCM explained easily and from the basics in Hindi for Maharashtra board curriculum",
     subject: "Math"
   },
-  {
+  /*{
     platform: "instagram",
     url: "https://www.instagram.com/reel/REPLACE_WITH_REAL_POST_URL/",
     title: "Example — replace me",
     description: "This is a placeholder for an Instagram reel or post. Paste a real Instagram video URL here — it will embed automatically. Delete this block once you have real guides.",
     subject: "Example"
-  }
+  }*/
 ];
