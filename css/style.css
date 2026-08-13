@@ -461,3 +461,33 @@ a {
   .guide-card, .btn { transition: none; }
   .guide-card:hover { transform: none !important; }
 }
+
+/* ========================================================
+   X (Twitter) platform support for guide cards
+   (append this block to the end of css/style.css, or keep
+   it as its own file and link it after style.css)
+   ======================================================== */
+:root {
+  --x-blue: #1D9BF0;
+}
+
+.guide-card[data-platform="x"] .pin {
+  background: radial-gradient(circle at 35% 30%, #7dcbff, var(--x-blue) 70%);
+}
+
+.guide-card[data-platform="x"] .card-tag .dot {
+  background: var(--x-blue);
+}
+
+/* Tweets don't have a fixed 16:9 shape like a video does, and their
+   embedded height varies with content — so for X cards we let the
+   media box grow to fit instead of forcing the video aspect ratio. */
+.guide-card[data-platform="x"] .card-media {
+  aspect-ratio: auto;
+  overflow: visible;
+  background: transparent;
+}
+
+.guide-card[data-platform="x"] .card-media iframe {
+  height: auto !important;
+}
