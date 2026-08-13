@@ -1,0 +1,62 @@
+/* ========================================================
+   Credits page
+   (append this block to the end of css/style.css)
+   ======================================================== */
+.credits-board {
+  padding: 48px 24px 96px;
+}
+
+.credits-toolbar {
+  margin-bottom: 32px;
+}
+
+.credit-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px 18px;
+}
+
+.credit-tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: var(--card);
+  border-radius: 3px;
+  padding: 11px 20px;
+  box-shadow:
+    0 1px 1px rgba(27,27,24,0.06),
+    0 6px 12px -6px rgba(27,27,24,0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.credit-tag:hover {
+  transform: rotate(0deg) translateY(-3px) !important;
+  box-shadow:
+    0 2px 2px rgba(27,27,24,0.08),
+    0 12px 20px -8px rgba(27,27,24,0.26);
+}
+
+.credit-tag .pin {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #f4d47a, var(--marker-yellow) 70%);
+  box-shadow: 0 3px 4px rgba(0,0,0,0.28);
+  z-index: 2;
+}
+
+.credit-name {
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .credit-tag { transition: none; }
+  .credit-tag:hover { transform: none !important; }
+}
